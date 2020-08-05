@@ -389,7 +389,7 @@ public class CourseGrade extends JFrame{
          }
       });
       
-      //TO CALCULATE FINAL GRADE AND DETERMINE THE RATING
+      //TO CALCULATE FINAL GRADE, DETERMINE THE RATING AND STATUS
       jcompute.addActionListener(new ActionListener(){
          public void actionPerformed (ActionEvent e){
    
