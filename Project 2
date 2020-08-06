@@ -117,201 +117,206 @@ public class CourseGrade extends JFrame{
       
       btn1.addActionListener(new ActionListener(){
          public void actionPerformed (ActionEvent e){
-            String x;
+            String x, y;
             x = txt1.getText();
-            f2.setTitle(x + "'s Grading");
-            f2.getContentPane().setLayout(null);
-            f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            f2.setSize (850,600);
-            f2.setResizable(false);
-   
-            f1.hide(); 
-            f2.show();  
-   
-            f2.getContentPane().add(lbl3);
-            f2.getContentPane().add(lbl4);
-            f2.getContentPane().add(lbl5);
-            f2.getContentPane().add(lbl6);
-            f2.getContentPane().add(lbl7);
-            f2.getContentPane().add(lbl8);
-            f2.getContentPane().add(lbl9);
-            f2.getContentPane().add(lbl10);
-            f2.getContentPane().add(lbl11);
-            f2.getContentPane().add(lbl12);
-            f2.getContentPane().add(lbl13);
-            f2.getContentPane().add(lbl14);
-            f2.getContentPane().add(lblcourse);
-            f2.getContentPane().add(jcompute);
-            f2.getContentPane().add(jclear);
-            f2.getContentPane().add(jexit);
-   
-            lbl3.setBounds(30,120,110,70);
-            lbl4.setBounds(30,170,110,70);
-            lbl5.setBounds(30,220,90,70);
-            lbl6.setBounds(30,270,120,70);
-            lbl7.setBounds(30,320,100,70);
-            lbl8.setBounds(30,370,110,70);
-            lbl9.setBounds(280,20,230,20);
-            lbl10.setBounds(30,420,80,70);
-            lbl11.setBounds(185,60,100,100);
-            lbl12.setBounds(315,60,100,100);
-            lbl13.setBounds(440,60,100,100);
-            lbl14.setBounds(575,60,100,100);
-            lblcourse.setBounds(240,25,300,50);
-            jcompute.setBounds(660,160,120, 60);
-            jclear.setBounds(660,260,120, 60);
-            jexit.setBounds(660,360,120,60);
-                           
-            //PRELIMINARY
-            f2.getContentPane().add(cb1); 
-            f2.getContentPane().add(cb2);
-            f2.getContentPane().add(cb3);
-            f2.getContentPane().add(cb4);
-            f2.getContentPane().add(cb5);
-            f2.getContentPane().add(cb6);
-            f2.getContentPane().add(btn3);
-            f2.getContentPane().add(txt3); 
-            txt3.setEditable(false);
-            cb1.setBounds(190,140,50,30);
-            cb2.setBounds(190,190,50,30);
-            cb3.setBounds(190,240,50,30);
-            cb4.setBounds(190,290,50,30);
-            cb5.setBounds(190,340,50,30);
-            cb6.setBounds(190,390,50,30);
-            btn3.setBounds(170,490,95,40);
-            txt3.setBounds(190,440,55,35);
-   
-            int addPrelim1 = 10;
-            for (int i = 0; i <= addPrelim1; i++) {
-               cb2.addItem(new Integer(i));        
-               cb4.addItem(new Integer(i));
-               cb5.addItem(new Integer(i));
-            }
-   
-            int addPrelim2 = 20;
-            for (int i = 0; i <= addPrelim2; i++) {
-               cb1.addItem(new Integer(i));        
-               cb3.addItem(new Integer(i));
-   
-            }   
-   
-            int addPrelim3 = 30;
-            for (int i = 0; i <= addPrelim3; i++) {
-               cb6.addItem(new Integer(i));
-            }
-   
-            //MIDTERM
-            f2.getContentPane().add(cb7); 
-            f2.getContentPane().add(cb8);
-            f2.getContentPane().add(cb9);
-            f2.getContentPane().add(cb10);
-            f2.getContentPane().add(cb11);
-            f2.getContentPane().add(cb12);              
-            f2.getContentPane().add(btn4);
-            f2.getContentPane().add(txt4); 
-            txt4.setEditable(false);
-            cb7.setBounds(315,140,50,30);
-            cb8.setBounds(315,190,50,30);
-            cb9.setBounds(315,240,50,30);
-            cb10.setBounds(315,290,50,30);
-            cb11.setBounds(315,340,50,30);
-            cb12.setBounds(315,390,50,30);
-            btn4.setBounds(295,490,95,40);
-            txt4.setBounds(315,440,55,35);
-   
-            int addMidterm1 = 10;
-            for (int i = 0; i <= addMidterm1; i++) {
-               cb8.addItem(new Integer(i));        
-               cb10.addItem(new Integer(i));
-               cb11.addItem(new Integer(i));
-            }
-   
-            int addMidterm2 = 20;
-            for (int i = 0; i <= addMidterm2; i++) {
-               cb7.addItem(new Integer(i));        
-               cb9.addItem(new Integer(i));
-            }   
-   
-            int addMidterm3 = 30;
-            for (int i = 0; i <= addMidterm3; i++) {
-               cb12.addItem(new Integer(i));
-            }
-   
-            //PREFINAL
-            f2.getContentPane().add(cb13); 
-            f2.getContentPane().add(cb14);
-            f2.getContentPane().add(cb15);
-            f2.getContentPane().add(cb16);
-            f2.getContentPane().add(cb17);
-            f2.getContentPane().add(cb18);
-            f2.getContentPane().add(btn5);
-            f2.getContentPane().add(txt5); 
-            txt5.setEditable(false);
-            cb13.setBounds(440,140,50,30);
-            cb14.setBounds(440,190,50,30);
-            cb15.setBounds(440,240,50,30);
-            cb16.setBounds(440,290,50,30);
-            cb17.setBounds(440,340,50,30);
-            cb18.setBounds(440,390,50,30);
-            btn5.setBounds(420,490,95,40);
-            txt5.setBounds(440,440,55,35);
-   
-            int addPrefinal1 = 10;
-            for (int i = 0; i <= addPrefinal1; i++) {
-               cb14.addItem(new Integer(i));       
-               cb16.addItem(new Integer(i));
-               cb17.addItem(new Integer(i));
-            }
-   
-            int addPrefinal2 = 20;
-            for (int i = 0; i <= addPrefinal2; i++) {
-               cb13.addItem(new Integer(i));       
-               cb15.addItem(new Integer(i));
-            }   
-   
-            int addPrefinal3 = 30;
-            for (int i = 0; i <= addPrefinal3; i++) {
-               cb18.addItem(new Integer(i));
-            }
-   
-   
-            //FINALS
-            f2.getContentPane().add(cb19); 
-            f2.getContentPane().add(cb20);
-            f2.getContentPane().add(cb21);
-            f2.getContentPane().add(cb22);
-            f2.getContentPane().add(cb23);
-            f2.getContentPane().add(cb24);
-            f2.getContentPane().add(btn6);
-            f2.getContentPane().add(txt6); 
-            txt6.setEditable(false);
-            cb19.setBounds(565,140,50,30);
-            cb20.setBounds(565,190,50,30);
-            cb21.setBounds(565,240,50,30);
-            cb22.setBounds(565,290,50,30);
-            cb23.setBounds(565,340,50,30);
-            cb24.setBounds(565,390,50,30);
-            btn6.setBounds(545,490,95,40);
-            txt6.setBounds(565,440,55,35);
-   
-            int addFinal1 = 10;
-            for (int i = 0; i <= addFinal1; i++) {
-              cb20.addItem(new Integer(i));       
-              cb22.addItem(new Integer(i));
-              cb23.addItem(new Integer(i));
-            }
-   
-            int addFinal2 = 20;
-            for (int i = 0; i <= addFinal2; i++) {
-               cb19.addItem(new Integer(i));       
-               cb21.addItem(new Integer(i));
-            }   
-   
-            int addFinal3 = 30;
-            for (int i = 0; i <= addFinal3; i++) {
-               cb24.addItem(new Integer(i));
-            }
-                                       
+            y = txt2.getText();
+            
+            if(x.isEmpty() || y.isEmpty()){
+               JOptionPane.showMessageDialog(null, " Please enter your name/matric no. ");
+            }else{
+               f2.setTitle(x + "'s Grading");
+               f2.getContentPane().setLayout(null);
+               f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+               f2.setSize (850,600);
+               f2.setResizable(false);
+      
+               f1.hide(); 
+               f2.show();  
+      
+               f2.getContentPane().add(lbl3);
+               f2.getContentPane().add(lbl4);
+               f2.getContentPane().add(lbl5);
+               f2.getContentPane().add(lbl6);
+               f2.getContentPane().add(lbl7);
+               f2.getContentPane().add(lbl8);
+               f2.getContentPane().add(lbl9);
+               f2.getContentPane().add(lbl10);
+               f2.getContentPane().add(lbl11);
+               f2.getContentPane().add(lbl12);
+               f2.getContentPane().add(lbl13);
+               f2.getContentPane().add(lbl14);
+               f2.getContentPane().add(lblcourse);
+               f2.getContentPane().add(jcompute);
+               f2.getContentPane().add(jclear);
+               f2.getContentPane().add(jexit);
+      
+               lbl3.setBounds(30,120,110,70);
+               lbl4.setBounds(30,170,110,70);
+               lbl5.setBounds(30,220,90,70);
+               lbl6.setBounds(30,270,120,70);
+               lbl7.setBounds(30,320,100,70);
+               lbl8.setBounds(30,370,110,70);
+               lbl9.setBounds(280,20,230,20);
+               lbl10.setBounds(30,420,80,70);
+               lbl11.setBounds(185,60,100,100);
+               lbl12.setBounds(315,60,100,100);
+               lbl13.setBounds(440,60,100,100);
+               lbl14.setBounds(575,60,100,100);
+               lblcourse.setBounds(240,25,300,50);
+               jcompute.setBounds(660,160,120, 60);
+               jclear.setBounds(660,260,120, 60);
+               jexit.setBounds(660,360,120,60);
+                              
+               //PRELIMINARY
+               f2.getContentPane().add(cb1); 
+               f2.getContentPane().add(cb2);
+               f2.getContentPane().add(cb3);
+               f2.getContentPane().add(cb4);
+               f2.getContentPane().add(cb5);
+               f2.getContentPane().add(cb6);
+               f2.getContentPane().add(btn3);
+               f2.getContentPane().add(txt3); 
+               txt3.setEditable(false);
+               cb1.setBounds(190,140,50,30);
+               cb2.setBounds(190,190,50,30);
+               cb3.setBounds(190,240,50,30);
+               cb4.setBounds(190,290,50,30);
+               cb5.setBounds(190,340,50,30);
+               cb6.setBounds(190,390,50,30);
+               btn3.setBounds(170,490,95,40);
+               txt3.setBounds(190,440,55,35);
+      
+               int addPrelim1 = 10;
+               for (int i = 0; i <= addPrelim1; i++) {
+                  cb2.addItem(new Integer(i));        
+                  cb4.addItem(new Integer(i));
+                  cb5.addItem(new Integer(i));
+               }
+      
+               int addPrelim2 = 20;
+               for (int i = 0; i <= addPrelim2; i++) {
+                  cb1.addItem(new Integer(i));        
+                  cb3.addItem(new Integer(i));
+      
+               }   
+      
+               int addPrelim3 = 30;
+               for (int i = 0; i <= addPrelim3; i++) {
+                  cb6.addItem(new Integer(i));
+               }
+      
+               //MIDTERM
+               f2.getContentPane().add(cb7); 
+               f2.getContentPane().add(cb8);
+               f2.getContentPane().add(cb9);
+               f2.getContentPane().add(cb10);
+               f2.getContentPane().add(cb11);
+               f2.getContentPane().add(cb12);              
+               f2.getContentPane().add(btn4);
+               f2.getContentPane().add(txt4); 
+               txt4.setEditable(false);
+               cb7.setBounds(315,140,50,30);
+               cb8.setBounds(315,190,50,30);
+               cb9.setBounds(315,240,50,30);
+               cb10.setBounds(315,290,50,30);
+               cb11.setBounds(315,340,50,30);
+               cb12.setBounds(315,390,50,30);
+               btn4.setBounds(295,490,95,40);
+               txt4.setBounds(315,440,55,35);
+      
+               int addMidterm1 = 10;
+               for (int i = 0; i <= addMidterm1; i++) {
+                  cb8.addItem(new Integer(i));        
+                  cb10.addItem(new Integer(i));
+                  cb11.addItem(new Integer(i));
+               }
+      
+               int addMidterm2 = 20;
+               for (int i = 0; i <= addMidterm2; i++) {
+                  cb7.addItem(new Integer(i));        
+                  cb9.addItem(new Integer(i));
+               }   
+      
+               int addMidterm3 = 30;
+               for (int i = 0; i <= addMidterm3; i++) {
+                  cb12.addItem(new Integer(i));
+               }
+      
+               //PREFINAL
+               f2.getContentPane().add(cb13); 
+               f2.getContentPane().add(cb14);
+               f2.getContentPane().add(cb15);
+               f2.getContentPane().add(cb16);
+               f2.getContentPane().add(cb17);
+               f2.getContentPane().add(cb18);
+               f2.getContentPane().add(btn5);
+               f2.getContentPane().add(txt5); 
+               txt5.setEditable(false);
+               cb13.setBounds(440,140,50,30);
+               cb14.setBounds(440,190,50,30);
+               cb15.setBounds(440,240,50,30);
+               cb16.setBounds(440,290,50,30);
+               cb17.setBounds(440,340,50,30);
+               cb18.setBounds(440,390,50,30);
+               btn5.setBounds(420,490,95,40);
+               txt5.setBounds(440,440,55,35);
+      
+               int addPrefinal1 = 10;
+               for (int i = 0; i <= addPrefinal1; i++) {
+                  cb14.addItem(new Integer(i));       
+                  cb16.addItem(new Integer(i));
+                  cb17.addItem(new Integer(i));
+               }
+      
+               int addPrefinal2 = 20;
+               for (int i = 0; i <= addPrefinal2; i++) {
+                  cb13.addItem(new Integer(i));       
+                  cb15.addItem(new Integer(i));
+               }   
+      
+               int addPrefinal3 = 30;
+               for (int i = 0; i <= addPrefinal3; i++) {
+                  cb18.addItem(new Integer(i));
+               }
+      
+      
+               //FINALS
+               f2.getContentPane().add(cb19); 
+               f2.getContentPane().add(cb20);
+               f2.getContentPane().add(cb21);
+               f2.getContentPane().add(cb22);
+               f2.getContentPane().add(cb23);
+               f2.getContentPane().add(cb24);
+               f2.getContentPane().add(btn6);
+               f2.getContentPane().add(txt6); 
+               txt6.setEditable(false);
+               cb19.setBounds(565,140,50,30);
+               cb20.setBounds(565,190,50,30);
+               cb21.setBounds(565,240,50,30);
+               cb22.setBounds(565,290,50,30);
+               cb23.setBounds(565,340,50,30);
+               cb24.setBounds(565,390,50,30);
+               btn6.setBounds(545,490,95,40);
+               txt6.setBounds(565,440,55,35);
+      
+               int addFinal1 = 10;
+               for (int i = 0; i <= addFinal1; i++) {
+                 cb20.addItem(new Integer(i));       
+                 cb22.addItem(new Integer(i));
+                 cb23.addItem(new Integer(i));
+               }
+      
+               int addFinal2 = 20;
+               for (int i = 0; i <= addFinal2; i++) {
+                  cb19.addItem(new Integer(i));       
+                  cb21.addItem(new Integer(i));
+               }   
+      
+               int addFinal3 = 30;
+               for (int i = 0; i <= addFinal3; i++) {
+                  cb24.addItem(new Integer(i));
+               }
+           }                            
          }
       });
       
@@ -334,7 +339,6 @@ public class CourseGrade extends JFrame{
             int cb6Int = Integer.parseInt(cb6.getSelectedItem().toString());
    
             txt3.setText(String.valueOf(cb1Int + cb2Int + cb3Int + cb4Int + cb5Int + cb6Int));
-   
          }
       });
       
@@ -350,9 +354,6 @@ public class CourseGrade extends JFrame{
             int cb12Int = Integer.parseInt(cb12.getSelectedItem().toString());
    
             txt4.setText(String.valueOf(cb7Int + cb8Int + cb9Int + cb10Int + cb11Int + cb12Int));
-   
-   
-   
          }
       });
    
@@ -368,8 +369,6 @@ public class CourseGrade extends JFrame{
             int cb18Int = Integer.parseInt(cb18.getSelectedItem().toString());
    
             txt5.setText(String.valueOf(cb13Int + cb14Int + cb15Int + cb16Int + cb17Int + cb18Int));
-   
-   
          }
       });
    
