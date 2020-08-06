@@ -409,7 +409,7 @@ public class CourseGrade extends JFrame{
             total = Double.toString(totalgrade);
             finalgrade.setText(total);
    
-            JFrame f3 = new JFrame ("Student Final Rating");
+            JFrame f3 = new JFrame ("Student Final Grading");
    
             f3.getContentPane().setLayout(null);
             f3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
